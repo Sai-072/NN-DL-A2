@@ -1,0 +1,160 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tDcE0ZiIgAKH",
+        "outputId": "c1bd164e-d004-4903-bf04-026e7e843984"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Nithin\n",
+            "Reddy\n",
+            "Nithin Reddy\n"
+          ]
+        }
+      ],
+      "source": [
+        "def full_name(a,b):\n",
+        "  return a+\" \"+b\n",
+        "firstname=input()\n",
+        "lastname=input()\n",
+        "print(full_name(firstname, lastname))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def string_alternative(s):\n",
+        "  return s[::2]\n",
+        "print(string_alternative(input()))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LlCQNr68iguX",
+        "outputId": "22bbb314-65a8-449a-fd45-247cdc693d25"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Good evening\n",
+            "Go vnn\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(os.getcwd()) \n",
+        "print(os.path.exists(downloads_path))  "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Nzn3ijcljPUn",
+        "outputId": "a08e25e7-7aa4-4c4b-bdfd-972314e60df7"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "/content\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "text = open(\"input.txt\", \"r\")\n",
+        "d = dict()\n",
+        "for line in text:\n",
+        "\n",
+        "    line = line.strip()\n",
+        "    line = line.lower()\n",
+        "    words = line.split(\" \")\n",
+        "    for word in words:\n",
+        "        if word in d:\n",
+        "            d[word] = d[word] + 1\n",
+        "        else:\n",
+        "            d[word] = 1\n",
+        "file1 = open('output.txt', 'w')\n",
+        "s=\"\"\n",
+        "for key in list(d.keys()):\n",
+        "    s+=key+ \":\"+ str(d[key])+\"\\n\"\n",
+        "file1.write(s)\n",
+        "file1.close()"
+      ],
+      "metadata": {
+        "id": "EJtDfuxQyKYp"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l=[]\n",
+        "l1=[]\n",
+        "n=int(input(\"Enter number of customers:\"))\n",
+        "for i in range(n):\n",
+        "  l.append(int(input()))\n",
+        "  l1.append(l[i]*2.54)\n",
+        "print(l)\n",
+        "print(l1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1R5DV9FGyWWi",
+        "outputId": "c7c69c04-aa70-4785-8ff0-fa2e1e2f7a1b"
+      },
+      "execution_count": 54,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number of customers:2\n",
+            "23\n",
+            "20\n",
+            "[23, 20]\n",
+            "[58.42, 50.8]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
